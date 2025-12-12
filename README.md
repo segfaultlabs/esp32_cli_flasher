@@ -2,9 +2,14 @@
 
 #### OR JUST USE A ONE LINER 
 
+---
+
+
 ##### PORT=$(ls /dev/cu.* | grep -E "usbserial|usbmodem" | head -n 1); INO=$(ls *.ino | head -n 1); [ -z "$INO" ] && echo "no .ino found" && exit 1; arduino-cli compile --fqbn esp32:esp32:esp32 . && arduino-cli upload --fqbn esp32:esp32:esp32 --port "$PORT" --upload-property upload.speed=115200 .
 
 
+
+---
 
 
 Simple shell script for flashing ESP boards from any directory.  
